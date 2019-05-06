@@ -5,6 +5,7 @@ import CreateNewcase from '@/components/CreateNewcase'
 import QueryCase from '@/components/QueryCase'
 import AddCase from '@/components/AddCase'
 import Load from '@/components/Load'
+import MyTrade from '@/components/MyTrade'
 
 Vue.use(Router)
 
@@ -12,8 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Load',
+      component: Load
     },
     {
       path:'/createnewcase',
@@ -31,9 +32,9 @@ export default new Router({
       component: QueryCase
     },
     {
-      path:'/load',
-      name:'Load',
-      component:Load
+      path:'/mytrade',
+      name:'MyTrade',
+      component: MyTrade
     }
   ]
 })

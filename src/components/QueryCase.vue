@@ -5,7 +5,7 @@
     </Form-item>
     <Form-item>
       <i-button type="primary" @click="handleSubmit('formValidate')">搜索</i-button>
-      <i-button type="ghost" @click="handleReset('formValidate')" style="margin-left: 8px">重置</i-button>
+      <i-button type="ghost" @click="handleReset('formValidate')" style="margin-left: 8px;color:black;">重置</i-button>
     </Form-item>
   </i-form>
 </template>
