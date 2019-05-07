@@ -1,5 +1,5 @@
 <template>
-  <div class="mytrade">
+  <div class="othertrade">
     <Steps :current="step">
         <Step title="新建交易" content="新建交易"></Step>
         <Step title="设置费用" content="设置费用"></Step>
@@ -42,7 +42,7 @@
 
 <script>
 export default {
-  name: 'MyTrade',
+  name: 'OtherTrade',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',

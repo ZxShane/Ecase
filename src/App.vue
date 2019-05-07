@@ -31,13 +31,17 @@
               <router-link to = 'mytrade'><MenuItem name="3-1">我的交易</MenuItem></router-link>
               <MenuItem name="3-2">别人发起的</MenuItem>
             </Submenu>
-            <Submenu name="3">
+            <MenuItem name="4">
+                        <Icon type="ios-analytics"></Icon>
+                        <span>密钥上传</span>
+            </MenuItem>
+            <!-- <Submenu name="3">
               <template slot="title">
                 <Icon type="ios-analytics"></Icon>密钥上传
               </template>
               <MenuItem name="4-1">Option 1</MenuItem>
               <MenuItem name="4-2">Option 2</MenuItem>
-            </Submenu>
+            </Submenu> -->
           </Menu>
         </Sider>
         <Layout :style="{padding: '0 24px 24px'}">
