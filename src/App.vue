@@ -2,8 +2,8 @@
   <div id="app">
     <Layout>
       <Header class="head">
-        <div >
-        <h1>区块链电子病历系统</h1>
+        <div>
+          <h1>区块链电子病历系统</h1>
         </div>
       </Header>
       <Layout>
@@ -13,9 +13,15 @@
               <template slot="title">
                 <Icon type="ios-navigate"></Icon>病例管理
               </template>
-              <router-link to = 'createnewcase'><MenuItem name="1-1">添加患者</MenuItem></router-link>
-              <router-link to = 'querycase'><MenuItem name="1-2">查询患者病历</MenuItem></router-link>
-              <router-link to = 'addcase'><MenuItem name="1-3">添加患者病例</MenuItem></router-link>
+              <router-link to="createnewcase">
+                <MenuItem name="1-1">添加患者</MenuItem>
+              </router-link>
+              <router-link to="querycase">
+                <MenuItem name="1-2">查询患者病历</MenuItem>
+              </router-link>
+              <router-link to="addcase">
+                <MenuItem name="1-3">添加患者病例</MenuItem>
+              </router-link>
             </Submenu>
             <Submenu name="2">
               <template slot="title">
@@ -28,24 +34,25 @@
               <template slot="title">
                 <Icon type="ios-analytics"></Icon>交易管理
               </template>
-              <router-link to = 'mytrade'><MenuItem name="3-1">我的交易</MenuItem></router-link>
-              <MenuItem name="3-2">别人发起的</MenuItem>
+              <router-link to="mytrade">
+                <MenuItem name="3-1">我的交易</MenuItem>
+              </router-link>
+              <router-link to="othertrade">
+                <MenuItem name="3-2">别人发起的</MenuItem>
+              </router-link>
             </Submenu>
             <MenuItem name="4">
-                        <Icon type="ios-analytics"></Icon>
-                        <span>密钥上传</span>
+              <Icon type="ios-analytics"></Icon>
+              <span>密钥上传</span>
             </MenuItem>
-            <!-- <Submenu name="3">
-              <template slot="title">
-                <Icon type="ios-analytics"></Icon>密钥上传
-              </template>
-              <MenuItem name="4-1">Option 1</MenuItem>
-              <MenuItem name="4-2">Option 2</MenuItem>
-            </Submenu> -->
           </Menu>
         </Sider>
         <Layout :style="{padding: '0 24px 24px'}">
-          <Content :style="{padding: '24px', minHeight: '280px', background: '#fff',margin: '24px 0'}"><router-view/></Content>
+          <Content
+            :style="{padding: '24px', minHeight: '280px', background: '#fff',margin: '24px 0'}"
+          >
+            <router-view/>
+          </Content>
         </Layout>
       </Layout>
     </Layout>
@@ -74,16 +81,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-.head{
+.head {
   text-align: center;
-  background-color:white;
+  background-color: white;
   width: 100%;
 }
-.menu{
+.menu {
   height: 700px;
   font-size: 18px;
 }
-a{
+a {
   text-decoration: none;
   color: black;
 }

@@ -6,6 +6,7 @@ import QueryCase from '@/components/QueryCase'
 import AddCase from '@/components/AddCase'
 import Load from '@/components/Load'
 import MyTrade from '@/components/MyTrade'
+import OtherTrade from '@/components/otherTrade'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
       path:'/mytrade',
       name:'MyTrade',
       component: MyTrade
+    },
+    {
+      path:'/othertrade',
+      name:'OtherTrade',
+      component: OtherTrade
     }
   ]
 })
