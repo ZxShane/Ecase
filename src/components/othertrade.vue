@@ -1,7 +1,7 @@
 <template>
   <div class="othertrade">
     <Button type="primary" icon="ios-search">搜索交易</Button>
-     <Table border :columns="columns1" :data="data1"></Table>
+     <Table border :columns="columns1" :data="data1" style="margin-top:30px;"></Table>
   </div>
  
 </template>
@@ -19,8 +19,29 @@ export default {
                     },
                     {
                         title: '操作',
-                        key: 'make'
+                        key: 'make',
+                        width:500,
+                        align: 'center',
+                        render: (h, params) => {
+                            return h('div', [
+                                h('Button', {
+                                    props: {
+                                        type: 'primary',
+                                        size: 'small'
+                                    },
+                                    style: {
+                                        marginRight: '5px'
+                                    },
+                                    on: {
+                                        click: () => {
+                                            this.show(params.index)
+                                        }
+                                    }
+                                }, '查看')
+                            ]);
+                        }
                     }
+                    
                 ],
       data1: [
         {

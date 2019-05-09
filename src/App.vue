@@ -3,7 +3,22 @@
     <Layout>
       <Header class="head">
         <div>
-          <h1>区块链电子病历系统</h1>
+          <h1 style="display:inline;margin-left:35%;">区块链电子病历系统</h1>
+           <img v-show="isshow" src="./assets/touxaing.jpg" width="50" height="50" id="touxiang">
+          <!-- <p class="name">lavender</p> -->
+          <Dropdown v-show="isshow">
+            <a href="javascript:void(0)" class="name">
+              admin 
+              <Icon type="ios-arrow-down"></Icon>
+            </a>
+            <DropdownMenu slot="list" style="display:inline;margin-top:-50px;">
+              <DropdownItem>个人信息</DropdownItem>
+              <DropdownItem>查看密钥</DropdownItem>
+              <DropdownItem>帮助</DropdownItem>
+              <DropdownItem>切换账户</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+          <Button type="primary" style="margin-left:20px;" v-show="isshow">logout</Button>
         </div>
       </Header>
       <Layout>
@@ -70,6 +85,16 @@ export default {
     handleClose(key, keyPath) {
       console.log(key, keyPath);
     }
+  },
+  data() {
+    return {
+      isshow: 1
+    };
+  },
+  mounted(){
+    this.show()
+  },
+  methods:{
   }
 };
 </script>
@@ -81,8 +106,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+#touxiang {
+  display: inline;
+  border-radius: 25px;
+  margin-left:33%;
+}
+.name {
+  display: inline;
+  font-size: 15px;
+  padding:0;
+  margin:0;
+}
 .head {
-  text-align: center;
   background-color: white;
   width: 100%;
 }
@@ -93,6 +128,7 @@ export default {
 a {
   text-decoration: none;
   color: black;
+  padding:0;
 }
 .content {
   margin-top: 40px;
