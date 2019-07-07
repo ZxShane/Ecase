@@ -1,44 +1,144 @@
+<!--<template xmlns="http://www.w3.org/1999/html">-->
+  <!--<i-form v-ref:form-validate :model="formValidate" :rules="ruleValidate" :label-width="80">-->
+    <!--<Form-item label="身份证号" prop="">-->
+      <!--<i-input :value.sync="formValidate.name" placeholder="请输入患者身份证号"></i-input>-->
+    <!--</Form-item>-->
+    <!--<Form-item>-->
+      <!--<i-button type="primary" @click="change">搜索</i-button>-->
+    <!--</Form-item>-->
+    <!--<hr style="height:1px;border:none;border-top:1px dashed #0066CC;margin-top:30px;" />-->
+    <!--<div v-show="one">-->
+      <!--<h3 style="margin-top:20px;">查找结果</h3>-->
+    <!--</div>-->
+  <!--</i-form>-->
+
+<!--</template>-->
 <template>
-  <i-form v-ref:form-validate :model="formValidate" :rules="ruleValidate" :label-width="80">
-    <Form-item label="身份证号" prop="">
-      <i-input :value.sync="formValidate.name" placeholder="请输入患者身份证号"></i-input>
-    </Form-item>
-    <Form-item>
-      <i-button type="primary" @click="handleSubmit('formValidate')">搜索</i-button>
-      <i-button type="ghost" @click="handleReset('formValidate')" style="margin-left: 8px;color:black;">重置</i-button>
-    </Form-item>
-  </i-form>
+  <div>
+    <h3 style="margin-top:20px;">输入身份证号</h3>
+    <input placeholder="412726200002202020" class="input">
+    <button id="btn" @click="change()">搜索</button>
+    <hr style="height:1px;border:none;border-top:1px dashed #0066CC;margin-top:30px;" />
+    <div v-show="one">
+      <h3 style="margin-top:20px;">查找结果</h3>
+      <table id="customers">
+        <tr>
+          <th>问题描述</th>
+          <th>病人情况</th>
+
+        </tr>
+        <tr>
+          <td>身份证号</td>
+          <td>412726200020202020</td>
+
+        </tr>
+        <tr class="alt">
+          <td>姓名</td>
+          <td>周显</td>
+
+        </tr>
+        <tr>
+          <td>出生日期</td>
+          <td>2000/02/20</td>
+
+        </tr>
+        <tr class="alt">
+          <td>性别</td>
+          <td>男</td>
+
+        </tr>
+        <tr>
+          <td>民族</td>
+
+          <td>汉</td>
+        </tr>
+        <tr class="alt">
+          <td>家庭住址</td>
+          <td>青岛市黄岛区</td>
+
+        </tr>
+        <tr>
+          <td>疾病类型</td>
+          <td>发烧</td>
+
+        </tr>
+        <tr>
+          <td>主诉</td>
+          <td>困，没有食欲，浑身无力</td>
+
+        </tr>
+        <tr class="alt">
+          <td>患者曾患何种疾病</td>
+          <td>阑尾炎</td>
+
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+
 </template>
 <script>
   export default {
-    name:'QueryCase',
+      name: 'QueryCase',
 
-    data () {
-      return {
-        formValidate: {
-
-        },
-        ruleValidate: {
-          name: [
-            { required: true, message: '姓名不能为空', trigger: 'blur' }
-          ],
-
-        }
-      }
-    },
-    methods: {
-      handleSubmit (name) {
-        this.$refs[name].validate((valid) => {
-          if (valid) {
-            this.$Message.success('提交成功!');
-          } else {
-            this.$Message.error('表单验证失败!');
+      data() {
+          return {
+              one:0
           }
-        })
       },
-      handleReset (name) {
-        this.$refs[name].resetFields();
-      }
-    }
+     methods:{
+          change(){
+              this.one=1;
+          }
+     }
   }
 </script>
+<style>
+  #btn{
+    background-color: #2D8Cf0; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  .input{
+    /*border:1px;*/
+    padding-left:3px;
+    padding-right:3px;
+    height:27px;
+    font-size:15px;
+    width:250px;
+  }
+   #customers
+   {
+     font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+     width:100%;
+     border-collapse:collapse;
+   }
+  #customers td, #customers th
+  {
+    font-size:1.1em;
+    border:1px solid #2D8Cf0;
+    padding:3px 7px 2px 7px;
+  }
+  #customers th
+  {
+    font-size:1.1em;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color: #54a3af;
+    color:#ffffff;
+  }
+  #customers tr.alt td
+  {
+    color:#000000;
+    background-color:#EAF2D3;
+  }
+</style>

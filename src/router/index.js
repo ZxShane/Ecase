@@ -7,6 +7,8 @@ import AddCase from '@/components/AddCase'
 import Load from '@/components/Load'
 import MyTrade from '@/components/MyTrade'
 import OtherTrade from '@/components/otherTrade'
+import Record from '@/components/record'
+import Account from '@/components/account'
 
 Vue.use(Router)
 
@@ -41,7 +43,17 @@ export default new Router({
       path:'/othertrade',
       name:'OtherTrade',
       component: OtherTrade
-    }
+    },
+      {
+        path:'/record',
+          name:'Record',
+          component:Record
+      },
+      {
+        path:'/account',
+          name:'account',
+          component:Account
+      }
   ]
 })
 

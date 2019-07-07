@@ -4,7 +4,7 @@
       <Header class="head">
         <div>
           <h1 style="display:inline;margin-left:35%;">区块链电子病历系统</h1>
-           <img v-show="isshow" src="./assets/touxaing.jpg" width="50" height="50" id="touxiang">
+           <img v-show="isshow" src="./assets/touxaing.jpg" style="margin-top:3px" width="45" height="45"  id="touxiang">
           <!-- <p class="name">lavender</p> -->
           <Dropdown v-show="isshow">
             <a href="javascript:void(0)" class="name">
@@ -42,8 +42,15 @@
               <template slot="title">
                 <Icon type="ios-keypad"></Icon>钱包管理
               </template>
-              <MenuItem name="2-1">余额</MenuItem>
-              <MenuItem name="2-2">收支记录</MenuItem>
+              <router-link to="account">
+                <MenuItem name="2-1">余额</MenuItem>
+              </router-link>
+
+              <router-link to="record">
+                <MenuItem name="2-2">收支记录</MenuItem>
+              </router-link>
+
+
             </Submenu>
             <Submenu name="3">
               <template slot="title">

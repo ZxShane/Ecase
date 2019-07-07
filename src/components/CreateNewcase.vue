@@ -26,7 +26,7 @@
       <i-input :value.sync="formValidate.nation" placeholder="请输入民族"></i-input>
     </Form-item>
     <Form-item label="家庭住址" prop="address">
-      <i-input :value.sync="formValidate.address" placeholder="请输入民族"></i-input>
+      <i-input :value.sync="formValidate.address" placeholder="请输入家庭住址"></i-input>
     </Form-item>
     <Form-item>
       <i-button type="primary" @click="handleSubmit('formValidate')">提交</i-button>
