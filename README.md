@@ -1,4 +1,4 @@
-# ecase
+# ecasenew
 
 > A Vue.js project
 
