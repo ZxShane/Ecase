@@ -14,7 +14,7 @@
     "iview": "^3.4.2",
     "jsencrypt": "^3.0.0-rc.1",
     "jsrsasign": "^8.0.12",
-    "keypair": "^1.0.1",
+    "keypair": "^1.0.4",
     "qs": "^6.7.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
